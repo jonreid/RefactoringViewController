@@ -11,9 +11,9 @@ final class ItemViewController: UIViewController {
             if let item = item {
                 titleLabel.text = item.title
                 imageView.image = item.image
-                currentPriceLabel.text = "$\(item.currentPrice)"
+                currentPriceLabel.text = "€\(item.currentPrice)"
                 if item.savingsRate > 0 {
-                    strikethroughPriceLabel.setStrikethroughText("$\(item.listPrice)")
+                    strikethroughPriceLabel.setStrikethroughText("€\(item.listPrice)")
                     strikethroughPriceLabel.isHidden = false
                 } else {
                     strikethroughPriceLabel.isHidden = true
