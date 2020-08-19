@@ -9,16 +9,16 @@ final class SplitViewController: UISplitViewController {
     private let regularItem = Item(
             title: "Corn Flake Shaped like State of Illinois",
             image: image(name: "illinois-corn-flake"),
-            currentPrice: 1350,
+            currentPrice: 1130,
             savingsRate: 0,
             listPrice: 0
             )
     private let saleItem = Item(
             title: "Dorito Shaped like Pope’s Hat",
             image: image(name: "pope-dorito"),
-            currentPrice: 1209,
+            currentPrice: 1012,
             savingsRate: 20,
-            listPrice: 1451
+            listPrice: 1265
             )
 
     init() {
