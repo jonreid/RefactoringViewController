@@ -3,10 +3,12 @@ import UIKit
 final class SelectionViewController: UIViewController {
     var showRegularItem: () -> Void
     var showSaleItem: () -> Void
+    var showNoItem: () -> Void
 
-    init(showRegularItem: @escaping () -> Void, showSaleItem: @escaping () -> Void) {
+    init(showRegularItem: @escaping () -> Void, showSaleItem: @escaping () -> Void, showNoItem: @escaping () -> Void) {
         self.showRegularItem = showRegularItem
         self.showSaleItem = showSaleItem
+        self.showNoItem = showNoItem
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -20,5 +22,9 @@ final class SelectionViewController: UIViewController {
 
     @IBAction private func showSaleItemTapped(sender: AnyObject) {
         showSaleItem()
+    }
+
+    @IBAction private func showNoTapped(sender: AnyObject) {
+        showNoItem()
     }
 }

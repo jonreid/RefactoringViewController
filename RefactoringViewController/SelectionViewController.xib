@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,22 +18,32 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h83-bp-AkS">
-                    <rect key="frame" x="67.5" y="287" width="239" height="92"/>
+                    <rect key="frame" x="71" y="259" width="232" height="148"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PC-TJ-8oA">
-                            <rect key="frame" x="0.0" y="0.0" width="239" height="46"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8PC-TJ-8oA">
+                            <rect key="frame" x="0.0" y="0.0" width="232" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                            <state key="normal" title="Show Regular Item"/>
+                            <state key="normal" title="Regular Item"/>
                             <connections>
                                 <action selector="showRegularItemTappedWithSender:" destination="-1" eventType="touchUpInside" id="bOy-wr-i2b"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piR-fz-iZC">
-                            <rect key="frame" x="0.0" y="46" width="239" height="46"/>
+                            <rect key="frame" x="0.0" y="56" width="232" height="46"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                            <state key="normal" title="Show Sale Item"/>
+                            <state key="normal" title="Sale Item"/>
                             <connections>
                                 <action selector="showSaleItemTappedWithSender:" destination="-1" eventType="touchUpInside" id="teH-YE-UJp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hur-re-z8P">
+                            <rect key="frame" x="0.0" y="102" width="232" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            <state key="normal" title="Clear"/>
+                            <connections>
+                                <action selector="showNoTappedWithSender:" destination="-1" eventType="touchUpInside" id="TAd-Ow-tP2"/>
                             </connections>
                         </button>
                     </subviews>
@@ -43,8 +51,8 @@
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
-                <constraint firstItem="h83-bp-AkS" firstAttribute="centerX" secondItem="d2f-Ac-sOu" secondAttribute="centerX" id="6ZM-aR-Fq3"/>
-                <constraint firstItem="h83-bp-AkS" firstAttribute="centerY" secondItem="d2f-Ac-sOu" secondAttribute="centerY" id="6av-4L-JZf"/>
+                <constraint firstItem="h83-bp-AkS" firstAttribute="centerY" secondItem="d2f-Ac-sOu" secondAttribute="centerY" id="47e-wg-PG9"/>
+                <constraint firstItem="h83-bp-AkS" firstAttribute="centerX" secondItem="d2f-Ac-sOu" secondAttribute="centerX" id="MAe-ky-re6"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <point key="canvasLocation" x="-179" y="-90"/>

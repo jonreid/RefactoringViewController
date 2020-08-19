@@ -26,7 +26,9 @@ final class SplitViewController: UISplitViewController {
         let itemVC = ItemViewController()
         let mainVC = SelectionViewController(
                 showRegularItem: { [weak self] in itemVC.item = self?.regularItem },
-                showSaleItem: { [weak self] in itemVC.item = self?.saleItem })
+                showSaleItem: { [weak self] in itemVC.item = self?.saleItem },
+                showNoItem: { itemVC.item = nil }
+        )
         viewControllers = [mainVC, itemVC]
     }
 
