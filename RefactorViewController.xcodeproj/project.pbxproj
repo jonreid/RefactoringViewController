@@ -14,11 +14,13 @@
 		489572231E997D8E005D64D3 /* SelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489572221E997D8E005D64D3 /* SelectionViewController.xib */; };
 		489572541E99B8DA005D64D3 /* illinois-corn-flake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 489572521E99B8DA005D64D3 /* illinois-corn-flake.jpg */; };
 		489572551E99B8DA005D64D3 /* pope-dorito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 489572531E99B8DA005D64D3 /* pope-dorito.jpg */; };
+		BB1702DA3405E273DF82B002 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF4F4D41E5DC2F4C714 /* TestingAppDelegate.swift */; };
 		BB1703F65A17C9C5F4E8EBF2 /* ItemViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170AB59B8448B95525DAED /* ItemViewControllerTests.swift */; };
 		BB1704B4DE60DE776DD49993 /* UILabel+Strikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FE0B24A98AB42C96F07 /* UILabel+Strikethrough.swift */; };
 		BB1705F99BB8E244233367CC /* ItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB170667D413F76C422D2399 /* ItemViewController.xib */; };
 		BB17068A5CDD5597D311DE03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170C461F7C3A931338483D /* Item.swift */; };
 		BB170B789958B5CB00E2CA2E /* blackPixel.png in Resources */ = {isa = PBXBuildFile; fileRef = BB17009AA5CA8E5AE06E13C9 /* blackPixel.png */; };
+		BB170C3B538378D3BC64375E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1706BABA0BFDB7D2B7FEAC /* main.swift */; };
 		BB170CD901B617C48A8E5ECF /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170D8A5F0075E301C32B8B /* ItemViewController.swift */; };
 		BB170DDD003F9F7985FDD1D2 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170AB54904C0F19D7CAB8F /* SplitViewController.swift */; };
 /* End PBXBuildFile section */
@@ -47,11 +49,13 @@
 		489572531E99B8DA005D64D3 /* pope-dorito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pope-dorito.jpg"; sourceTree = "<group>"; };
 		BB17009AA5CA8E5AE06E13C9 /* blackPixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackPixel.png; sourceTree = "<group>"; };
 		BB170667D413F76C422D2399 /* ItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewController.xib; sourceTree = "<group>"; };
+		BB1706BABA0BFDB7D2B7FEAC /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BB170AB54904C0F19D7CAB8F /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		BB170AB59B8448B95525DAED /* ItemViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewControllerTests.swift; sourceTree = "<group>"; };
 		BB170C461F7C3A931338483D /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BB170D8A5F0075E301C32B8B /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		BB170FE0B24A98AB42C96F07 /* UILabel+Strikethrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Strikethrough.swift"; sourceTree = "<group>"; };
+		BB170FF4F4D41E5DC2F4C714 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				BB17009AA5CA8E5AE06E13C9 /* blackPixel.png */,
 				485E7B7D1E996ACB006E8DAC /* Info.plist */,
 				BB170AB59B8448B95525DAED /* ItemViewControllerTests.swift */,
+				BB170FF4F4D41E5DC2F4C714 /* TestingAppDelegate.swift */,
 			);
 			path = RefactoringViewControllerTests;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				489572221E997D8E005D64D3 /* SelectionViewController.xib */,
 				BB170AB54904C0F19D7CAB8F /* SplitViewController.swift */,
 				BB170FE0B24A98AB42C96F07 /* UILabel+Strikethrough.swift */,
+				BB1706BABA0BFDB7D2B7FEAC /* main.swift */,
 			);
 			name = "App Details";
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 				BB170DDD003F9F7985FDD1D2 /* SplitViewController.swift in Sources */,
 				BB17068A5CDD5597D311DE03 /* Item.swift in Sources */,
 				BB1704B4DE60DE776DD49993 /* UILabel+Strikethrough.swift in Sources */,
+				BB170C3B538378D3BC64375E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB1703F65A17C9C5F4E8EBF2 /* ItemViewControllerTests.swift in Sources */,
+				BB1702DA3405E273DF82B002 /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
