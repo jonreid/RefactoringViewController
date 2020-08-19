@@ -44,13 +44,13 @@ final class ItemViewControllerTests : XCTestCase {
         XCTAssertTrue(sut.imageView.image === image)
     }
 
-    func test_settingItem_shouldShowCurrentPriceLabelWithDollars() {
+    func test_settingItem_shouldShowCurrentPriceLabelWithCurrency() {
         sut.item = Item(title: "", image: UIImage(), currentPrice: 123, savingsRate: 0, listPrice: 0)
 
         XCTAssertEqual(sut.currentPriceLabel.text, "$123")
     }
 
-    func test_settingItem_withSavings_shouldShowStrikethroughPriceAsListPriceWithDollars() {
+    func test_settingItem_withSavings_shouldShowStrikethroughPriceAsListPriceWithCurrency() {
         sut.item = Item(title: "", image: UIImage(), currentPrice: 0, savingsRate: 1, listPrice: 123)
 
         XCTAssertEqual(sut.strikethroughPriceLabel.attributedText?.string, "$123")
