@@ -1,9 +1,9 @@
 import UIKit
 
 final class SelectionViewController: UIViewController {
-    var showRegularItem: () -> Void
-    var showSaleItem: () -> Void
-    var showNoItem: () -> Void
+    private var showRegularItem: () -> Void
+    private var showSaleItem: () -> Void
+    private var showNoItem: () -> Void
 
     init(showRegularItem: @escaping () -> Void, showSaleItem: @escaping () -> Void, showNoItem: @escaping () -> Void) {
         self.showRegularItem = showRegularItem
