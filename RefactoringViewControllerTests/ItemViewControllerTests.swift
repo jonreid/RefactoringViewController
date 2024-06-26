@@ -4,6 +4,7 @@ import XCTest
 final class ItemViewControllerTests : XCTestCase {
     private var sut: ItemViewController!
 
+    @MainActor
     override func setUp() {
         super.setUp()
         sut = ItemViewController()
@@ -15,6 +16,7 @@ final class ItemViewControllerTests : XCTestCase {
         super.tearDown()
     }
 
+    @MainActor
     func test_outlets_shouldBeConnected() {
         XCTAssertNotNil(sut.titleLabel, "titleLabel")
         XCTAssertNotNil(sut.imageView, "imageView")
@@ -22,6 +24,7 @@ final class ItemViewControllerTests : XCTestCase {
         XCTAssertNotNil(sut.strikethroughPriceLabel, "strikethroughPriceLabel")
     }
 
+    @MainActor
     func test_loadingView_shouldClearTheView() {
         XCTAssertNil(sut.titleLabel.text, "titleLabel text")
         XCTAssertNil(sut.imageView.image, "imageView image")
@@ -29,12 +32,14 @@ final class ItemViewControllerTests : XCTestCase {
         XCTAssertNil(sut.strikethroughPriceLabel.text, "strikethroughPriceLabel text")
     }
     
+    @MainActor
     func test_settingItem_shouldShowTitle() {
         sut.item = Item(title: "TITLE", image: UIImage(), currentPrice: 0, savingsRate: 0, listPrice: 0)
 
         XCTAssertEqual(sut.titleLabel.text, "TITLE")
     }
 
+    @MainActor
     func test_settingItem_shouldShowImage() {
         let path = Bundle(for: type(of: self)).path(forResource: "blackPixel", ofType: "png")!
         let image = UIImage(contentsOfFile: path)!
@@ -44,18 +49,21 @@ final class ItemViewControllerTests : XCTestCase {
         XCTAssertTrue(sut.imageView.image === image)
     }
 
+    @MainActor
     func test_settingItem_shouldShowCurrentPriceLabelWithCurrency() {
         sut.item = Item(title: "", image: UIImage(), currentPrice: 123, savingsRate: 0, listPrice: 0)
 
         XCTAssertEqual(sut.currentPriceLabel.text, "€123")
     }
 
+    @MainActor
     func test_settingItem_withSavings_shouldShowStrikethroughPriceAsListPriceWithCurrency() {
         sut.item = Item(title: "", image: UIImage(), currentPrice: 0, savingsRate: 1, listPrice: 123)
 
         XCTAssertEqual(sut.strikethroughPriceLabel.attributedText?.string, "€123")
     }
 
+    @MainActor
     func test_settingItem_withSavings_shouldShowStrikethroughPriceWithStrikethroughAttribute() {
         sut.item = Item(title: "", image: UIImage(), currentPrice: 0, savingsRate: 1, listPrice: 123)
 
@@ -63,6 +71,7 @@ final class ItemViewControllerTests : XCTestCase {
         XCTAssertNotNil(salePrice.attributes(at: 0, effectiveRange: nil)[NSAttributedString.Key.strikethroughStyle])
     }
 
+    @MainActor
     func test_settingItem_withSavings_shouldShowPreviouslyHiddenStrikethroughPrice() {
         sut.strikethroughPriceLabel.isHidden = true
 
@@ -71,6 +80,7 @@ final class ItemViewControllerTests : XCTestCase {
         XCTAssertFalse(sut.strikethroughPriceLabel.isHidden)
     }
 
+    @MainActor
     func test_settingItem_withNoSavings_shouldHidePreviouslyShowingStrikethroughPrice() {
         sut.strikethroughPriceLabel.isHidden = false
 
@@ -79,6 +89,7 @@ final class ItemViewControllerTests : XCTestCase {
         XCTAssertTrue(sut.strikethroughPriceLabel.isHidden)
     }
 
+    @MainActor
     func test_clearingItem_shouldClearTheView() {
         sut.item = Item(title: "", image: UIImage(), currentPrice: 0, savingsRate: 1, listPrice: 123)
         
